@@ -1,12 +1,24 @@
 # python
 comparing gradient descent with sigmoid and tanh activation functions
 this code does xor function of two bits and the neural network needs to learn the xor logic
+derivative.py plots the derivates of a quadratic equation, a sigmoid and tanh
+sigmoidtanhgradientdescent.py shows xor logic without bias for neural network with two inputs 
+sigmoidtanhgradientdescentwithbias.py shows xor logic with bias for neural network with xor logic.
 
 
 # running the code
 
 one can use jupyter notebook to run this sample
-pre-reqs; need python3 and numpy packages installed
+pre-reqs; need python3 and numpy, matplotlib packages installed
+
+# sigmoid and tanh functions
+
+![image](https://github.com/bhatth2020/python/assets/148010912/85146a0b-02c8-415b-ae2a-8712bad9c645)
+
+# derivative of sigmoid and tanh functions
+
+![image](https://github.com/bhatth2020/python/assets/148010912/996c8e98-578d-444f-b354-a0dfdf506116)
+
 
 # output of reduction in loss using sigmoid and tanh activation functions
 
