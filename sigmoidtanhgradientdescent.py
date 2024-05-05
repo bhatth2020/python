@@ -1,4 +1,5 @@
 import numpy as np
+import matplotlib.pyplot as plt
 
 #sigmoid activation function
 
@@ -27,13 +28,16 @@ X = np.array([[0,0], [0,1], [1,0], [1,1]])
 #expected output
 y = np.array([[0], [1], [1], [0]])
 
-#seed for random weights initially, use sigmoid activation function and derivative
+#seed for random weights initially
 
 np.random.seed(31)
 
 #initialize weights randomly
 weights_0 = 2 * np.random.random((2,3)) - 1 #weights for input to hidden layer
 weights_1 = 2 * np.random.random((3,1)) - 1 #weights for hidden to output layer
+
+#store errors for plotting
+errors = []
 
 for epoch in range(20001):
   #forward prop
@@ -43,6 +47,7 @@ for epoch in range(20001):
 
   #calculate error
   layer_2_error = y - layer_2
+  errors.append(np.mean(np.abs(layer_2_error)))
 
   #backprop
   layer_2_delta = layer_2_error * sigmoid_derivative(layer_2)
@@ -57,13 +62,23 @@ for epoch in range(20001):
   if epoch % 1000 == 0:
     print(f'Error at epoch with sigmoid {epoch}: {np.mean(np.abs(layer_2_error))}')
 
-#seed for random weights initially; use tanh activation function and derivative
+#plot the errors to show gradient descent
+plt.plot(errors)
+plt.xlabel('Epoch')
+plt.ylabel('Mean Absolute Error')
+plt.title('Error over Epochs - Sigmoid')
+plt.show()
+
+#seed for random weights initially; use tanh derivative
 
 np.random.seed(27)
 
 #initialize weights randomly
 weights_0 = 2 * np.random.random((2,3)) - 1 #weights for input to hidden layer
 weights_1 = 2 * np.random.random((3,1)) - 1 #weights for hidden to output layer
+
+#store errors for plotting
+errors = []
 
 for epoch in range(20001):
   #forward prop
@@ -73,6 +88,7 @@ for epoch in range(20001):
 
   #calculate error
   layer_2_error = (y - layer_2)
+  errors.append(np.mean(np.abs(layer_2_error)))
 
   #backprop
   layer_2_delta = layer_2_error * tanh_derivative(layer_2)
@@ -86,3 +102,10 @@ for epoch in range(20001):
   #print error every 1000 epoch
   if epoch % 1000 == 0:
     print(f'Error at epoch with tanh {epoch}: {np.mean(np.abs(layer_2_error))}')
+
+#plot the errors to show gradient descent
+plt.plot(errors)
+plt.xlabel('Epoch')
+plt.ylabel('Mean Absolute Error')
+plt.title('Error over Epochs - tanh')
+plt.show()
