@@ -61,5 +61,9 @@ Error at epoch with tanh 20000: 0.1381890225960804
 ![image](https://github.com/bhatth2020/python/assets/148010912/9685d313-743c-4b93-bdc9-8785b7a5670a)
 
 #plotting gradient descent with bias with sigmoid activation function
+![image](https://github.com/bhatth2020/python/assets/148010912/54c3c26f-c1e1-41dc-890e-140088681755)
+
 
 #plotting gradient descent with bias with tanh activation function
+![image](https://github.com/bhatth2020/python/assets/148010912/bcd97002-e25c-4d1f-8e38-a4cbcebd21c6)
+
