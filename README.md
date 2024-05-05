@@ -4,6 +4,7 @@ comparing gradient descent with sigmoid and tanh activation functions
 # running the code
 
 one can use jupyter notebook to run this sample
+pre-reqs; need python3 and numpy packages installed
 
 # output of reduction in loss using sigmoid and tanh activation functions
 
