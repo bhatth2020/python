@@ -1,11 +1,13 @@
 # pylint: skip-file
 import numpy as np
+import matplotlib.pyplot as plt
 
 class NeuralNetwork:
     def __init__(self, input_size, hidden_size, output_size):
         self.input_size = input_size
         self.hidden_size = hidden_size
         self.output_size = output_size
+        self.errors = []
         
         # Initialize weights and biases
         self.W1 = np.random.randn(self.input_size, self.hidden_size)  # Weight matrix for input to hidden
@@ -25,7 +27,7 @@ class NeuralNetwork:
     def tanh_derivative(self, x):
         return 1 - x ** 2
 
-    def forward_tahh(self, X):
+    def forward_tanh(self, X):
         # Forward propagation
         self.z1 = np.dot(X, self.W1) + self.b1
         self.a1 = self.tanh(self.z1)
@@ -72,6 +74,8 @@ class NeuralNetwork:
         for epoch in range(epochs):
             output = self.forward_tanh(X)
             self.backward_tanh(X, y, output)
+            error = np.mean(np.abs(self.error))
+            self.errors.append(error)
             if epoch % 1000 == 0:
                 print(f'Error: {np.mean(np.abs(self.error))}')
 
@@ -79,13 +83,23 @@ class NeuralNetwork:
         for epoch in range(epochs):
             output = self.forward_sigmoid(X)
             self.backward_sigmoid(X, y, output)
+            error = np.mean(np.abs(self.error))
+            self.errors.append(error)
             if epoch % 1000 == 0:
                 print(f'Error: {np.mean(np.abs(self.error))}')
 
-# Example usage
+    def plot_errors(self):
+        plt.plot(range(len(self.errors)), self.errors)
+        plt.xlabel('Epochs')
+        plt.ylabel('Error')
+        plt.title('Error vs. Epochs')
+        plt.show()
+
+#main function
 if __name__ == "__main__":
     # Define training data
     X = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
+    # output is xor of input data
     y = np.array([[0], [1], [1], [0]])
     
     # Initialize neural network
@@ -96,8 +110,11 @@ if __name__ == "__main__":
     
     # Train neural network
     nn_sigmoid.train_sigmoid(X, y, epochs=20001)
+
+    # Plot errors
+    nn_sigmoid.plot_errors()
     
-    # Test the trained network
+    # Test the trained network using sigmoid activation function
     test_data = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
     print("Predictions after training:")
     for input_data in test_data:
@@ -107,9 +124,12 @@ if __name__ == "__main__":
     nn_tanh = NeuralNetwork(input_size, hidden_size, output_size)
     
     # Train neural network
-    nn_tanh.train_sigmoid(X, y, epochs=20001)
-    
-    # Test the trained network
+    nn_tanh.train_tanh(X, y, epochs=20001)
+
+    # Plot errors
+    nn_tanh.plot_errors()
+
+    # Test the trained network using tanh activation function
     test_data = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
     print("Predictions after training:")
     for input_data in test_data:
