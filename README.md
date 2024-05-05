@@ -51,3 +51,10 @@ Error at epoch with tanh 17000: 0.13820780410521621
 Error at epoch with tanh 18000: 0.13820085557951717
 Error at epoch with tanh 19000: 0.138194630924577
 Error at epoch with tanh 20000: 0.1381890225960804
+
+#plotting gradient descent with sigmoid activation function
+![image](https://github.com/bhatth2020/python/assets/148010912/4e2c6ab8-2d5d-49e6-ade4-94c000676a82)
+
+#plotting gradient descent with tanh activation function
+![image](https://github.com/bhatth2020/python/assets/148010912/9685d313-743c-4b93-bdc9-8785b7a5670a)
+
