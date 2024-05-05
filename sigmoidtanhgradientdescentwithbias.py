@@ -135,3 +135,23 @@ if __name__ == "__main__":
     for input_data in test_data:
         output = nn_tanh.forward_sigmoid(input_data)
         print(f'Input: {input_data}, Output: {output}')
+
+    
+    # Define training data, xor of inputs one by one 
+    # e.g: 0, 1, 0 => 0, 1 xor is 1; 1 xor 0 is 1 
+    # e.g: 1, 0, 1 => 1, 0 xor is 1; 1 xor 1 is 0
+    X = np.array([[0, 0, 0], [0, 0, 1], [0, 1, 0], [0, 1, 1], [1, 0, 0], [1, 0, 1], [1, 1, 0], [1, 1, 1]])
+    # output is xor of input data
+    y = np.array([[0], [1], [1], [0], [1], [0], [0], [1]])
+    
+    # Initialize neural network
+    input_size = 3
+    hidden_size = 8
+    output_size = 1
+    nn_sigmoid = NeuralNetwork(input_size, hidden_size, output_size)
+    
+    # Train neural network
+    nn_sigmoid.train_sigmoid(X, y, epochs=20001)
+
+    # Plot errors
+    nn_sigmoid.plot_errors()
