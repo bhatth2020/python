@@ -1,5 +1,7 @@
 # python
 comparing gradient descent with sigmoid and tanh activation functions
+this code does xor function of two bits and the neural network needs to learn the xor logic
+
 
 # running the code
 
@@ -58,3 +60,6 @@ Error at epoch with tanh 20000: 0.1381890225960804
 #plotting gradient descent with tanh activation function
 ![image](https://github.com/bhatth2020/python/assets/148010912/9685d313-743c-4b93-bdc9-8785b7a5670a)
 
+#plotting gradient descent with bias with sigmoid activation function
+
+#plotting gradient descent with bias with tanh activation function
