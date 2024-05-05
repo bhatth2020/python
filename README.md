@@ -1,6 +1,10 @@
 # python
 comparing gradient descent with sigmoid and tanh activation functions
 
+# running the code
+
+one can use jupyter notebook to run this sample
+
 # output of reduction in loss using sigmoid and tanh activation functions
 
 Error at epoch with sigmoid 0: 0.4982595484906155
