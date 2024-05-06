@@ -155,3 +155,10 @@ if __name__ == "__main__":
 
     # Plot errors
     nn_sigmoid.plot_errors()
+
+    # test the network after training
+    test_data = np.array([[0, 0, 0], [0, 0, 1], [0, 1, 0], [0, 1, 1], [1, 0, 0], [1, 0, 1], [1, 1, 0], [1, 1, 1]])
+    print("Predictions after training:")
+    for input_data in test_data:
+        output = nn_sigmoid.forward_sigmoid(input_data)
+        print(f'Input: {input_data}, Output: {output}')
