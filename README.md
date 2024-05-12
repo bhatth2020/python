@@ -6,6 +6,8 @@ This code does xor function of two bits and the neural network needs to learn th
 derivative.py plots the derivates of a quadratic equation, a sigmoid and tanh functions.
 sigmoidtanhgradientdescent.py shows xor logic without bias for neural network with two inputs 
 sigmoidtanhgradientdescentwithbias.py shows xor logic with bias for neural network with xor logic.
+xorwiththreebitssigmoid.py shows gradient descent with sigmoid and softmax activation functions with adam optimized for three bit xor
+using tensorflow library
 
 
 # running the code
@@ -92,8 +94,9 @@ The code is in xorwiththreebitsactivation.py, it uses tensorflow library
  [0.9964 0.0036]
  [0.9872 0.0128]
  [0.008  0.992 ]]
- 
-![image](https://github.com/bhatth2020/python/assets/148010912/e494c848-01a2-4aa2-a64e-a65b2ee4e701)
+
+![image](https://github.com/bhatth2020/python/assets/148010912/c51857d1-eac8-4a9e-9876-781aed663ded)
+
 
 #plotting gradient descent with sigmoid and softmax activation functions with adam optimized for three bit xor
 The code is xorwiththreebitssigmoid.py, using tensorflow library
