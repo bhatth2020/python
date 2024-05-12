@@ -82,7 +82,7 @@ Error at epoch with tanh 20000: 0.1381890225960804
 ![image](https://github.com/bhatth2020/python/assets/148010912/bcd97002-e25c-4d1f-8e38-a4cbcebd21c6)
 
 #plotting gradient descent with relu and softmax activation functions with adam optimizer for three bit xor
-The code is in xorwiththreebitsrelu.py, it uses tensorflow library
+The code is in xorwiththreebitsactivation.py, it uses tensorflow library
 3-bit Predictions (Full):
 [[0.9924 0.0076]
  [0.0024 0.9976]
@@ -108,4 +108,49 @@ The code is xorwiththreebitssigmoid.py, using tensorflow library
  [0.0601 0.9399]]
 
 ![image](https://github.com/bhatth2020/python/assets/148010912/869b42ee-1772-465f-8c1a-853a1670921f)
+
+#plotting gradient descent with gelu and softmax activation functions with adam optimizer for three bit xor
+
+
+This training takes more compute time as gelu is computationally more complex
+3-bit Predictions (Full):
+[[0.9924 0.0076]
+ [0.0024 0.9976]
+ [0.0114 0.9886]
+ [0.9934 0.0066]
+ [0.0086 0.9914]
+ [0.9964 0.0036]
+ [0.9872 0.0128]
+ [0.008  0.992 ]]
+
+ ![image](https://github.com/bhatth2020/python/assets/148010912/4208749a-5ab6-4c59-85fc-a91acf32398a)
+
+#plotting gradient descent with tanh and softmax activation functions with adam optimizer for three bit xor
+
+3-bit Predictions (Full):
+[[0.9972 0.0028]
+ [0.0014 0.9986]
+ [0.0012 0.9988]
+ [0.9981 0.0019]
+ [0.002  0.998 ]
+ [0.9993 0.0007]
+ [0.999  0.001 ]
+ [0.0016 0.9984]]
+
+
+![image](https://github.com/bhatth2020/python/assets/148010912/5ac6a546-6cfe-45a2-8ceb-6072b2efce03)
+
+#plotting gradient descent with selu, softmax activation and adam optimizer for three bit xor
+
+3-bit Predictions (Full):
+[[0.9875 0.0125]
+ [0.0088 0.9912]
+ [0.0211 0.9789]
+ [0.9878 0.0122]
+ [0.0179 0.9821]
+ [0.9849 0.0151]
+ [0.9744 0.0256]
+ [0.0178 0.9822]]
+
+![image](https://github.com/bhatth2020/python/assets/148010912/a45abcf3-171d-4ac4-9ae1-c5203018cd11)
 
