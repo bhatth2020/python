@@ -81,3 +81,7 @@ Error at epoch with tanh 20000: 0.1381890225960804
 #plotting gradient descent with bias with tanh activation function
 ![image](https://github.com/bhatth2020/python/assets/148010912/bcd97002-e25c-4d1f-8e38-a4cbcebd21c6)
 
+#plotting gradient descent with bias with relu and softmax activation functions with adam optimizer for three bit xor
+The code is in xorwiththreebitsrelu.py, it uses tensorflow library
+![image](https://github.com/bhatth2020/python/assets/148010912/e494c848-01a2-4aa2-a64e-a65b2ee4e701)
+
