@@ -17,6 +17,9 @@ def predict_model(model, data):
     return model(data)
 
 # Building a model for 3-bit XOR with a single hidden layer
+# change the activation to relu, sigmoid, gelu, tanh to see how different activations work
+# updates of gradient descent in README.md
+# sigmoid doesn't perform as well as ReLu for gradient descent
 model_3bit = tf.keras.Sequential([
     tf.keras.layers.Dense(8, input_dim=3, activation='relu'),  # Hidden layer with 8 neurons
     tf.keras.layers.Dense(2, activation='softmax')             # Output layer with Softmax
