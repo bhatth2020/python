@@ -99,7 +99,6 @@ The code is in xorwiththreebitsactivation.py, it uses tensorflow library
 
 
 #plotting gradient descent with sigmoid and softmax activation functions with adam optimized for three bit xor
-The code is xorwiththreebitssigmoid.py, using tensorflow library
 3-bit Predictions (Full):
 [[0.9108 0.0892]
  [0.0811 0.9189]
@@ -110,7 +109,8 @@ The code is xorwiththreebitssigmoid.py, using tensorflow library
  [0.9376 0.0624]
  [0.0601 0.9399]]
 
-![image](https://github.com/bhatth2020/python/assets/148010912/869b42ee-1772-465f-8c1a-853a1670921f)
+![image](https://github.com/bhatth2020/python/assets/148010912/1403c661-db42-4253-8a56-326a121b42b7)
+
 
 #plotting gradient descent with gelu and softmax activation functions with adam optimizer for three bit xor
 
@@ -126,7 +126,8 @@ This training takes more compute time as gelu is computationally more complex
  [0.9872 0.0128]
  [0.008  0.992 ]]
 
- ![image](https://github.com/bhatth2020/python/assets/148010912/4208749a-5ab6-4c59-85fc-a91acf32398a)
+![image](https://github.com/bhatth2020/python/assets/148010912/316a597b-e140-4387-95a7-e05fbc5e7854)
+
 
 #plotting gradient descent with tanh and softmax activation functions with adam optimizer for three bit xor
 
@@ -140,8 +141,8 @@ This training takes more compute time as gelu is computationally more complex
  [0.999  0.001 ]
  [0.0016 0.9984]]
 
+![image](https://github.com/bhatth2020/python/assets/148010912/7c568f59-88f6-4460-a6ff-a58daa1741e9)
 
-![image](https://github.com/bhatth2020/python/assets/148010912/5ac6a546-6cfe-45a2-8ceb-6072b2efce03)
 
 #plotting gradient descent with selu, softmax activation and adam optimizer for three bit xor
 
@@ -155,5 +156,6 @@ This training takes more compute time as gelu is computationally more complex
  [0.9744 0.0256]
  [0.0178 0.9822]]
 
-![image](https://github.com/bhatth2020/python/assets/148010912/a45abcf3-171d-4ac4-9ae1-c5203018cd11)
+![image](https://github.com/bhatth2020/python/assets/148010912/d1d4226c-448c-4b75-99d9-6a38ae463739)
+
 
