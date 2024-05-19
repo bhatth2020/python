@@ -1,6 +1,7 @@
 # pylint: skip-file
-# users the transformer python library and some of its capabilities
+# uses the transformer python library and some of its capabilities
 # transformers library is noted here - https://github.com/huggingface/transformers
+# one can run using a jupyter notebook
 # !pip install transformers => to install the library
 # The transformers Python package is an open-source library developed by Hugging Face, a company specializing in natural language processing (NLP) and machine learning. 
 # The library provides easy access to a variety of pre-trained models for tasks such as text classification, named entity recognition, text generation, and translation
