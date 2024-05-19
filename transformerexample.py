@@ -74,3 +74,25 @@ generated_texts = text_generator(prompt, max_length=200, num_return_sequences=1,
 # Print the generated stories
 for i, text in enumerate(generated_texts):
     print(f"Story {i + 1}:\n{text['generated_text']}\n")
+
+#example-4 
+from transformers import pipeline
+
+# Named Entity Recognition with a specified model and additional parameters
+ner_pipeline = pipeline(
+    "ner", 
+    model="dbmdz/bert-large-cased-finetuned-conll03-english",
+    tokenizer="dbmdz/bert-large-cased-finetuned-conll03-english",
+    aggregation_strategy="simple",  # Combine adjacent entities of the same type
+    grouped_entities=True  # Group entities by type
+)
+
+text = "Seattle, the largest city in the state of Washington, is renowned for its vibrant cultural scene, technological innovation, and stunning natural beauty. Located between Puget Sound and Lake Washington, Seattle is surrounded by water, mountains, and evergreen forests, giving it a unique blend of urban and natural environments. The city is a hub for major tech companies, including Amazon and Microsoft, which have significantly influenced its growth and development"
+
+# Run NER pipeline on the input text
+results = ner_pipeline(text)
+
+# Print the results
+for entity in results:
+    print(f"Entity: {entity['word']}, Label: {entity['entity_group']}, Score: {entity['score']:.4f}")
+
