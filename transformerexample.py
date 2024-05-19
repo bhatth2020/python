@@ -1,3 +1,4 @@
+# pylint: skip-file
 # users the transformer python library and some of its capabilities
 # transformers library is noted here - https://github.com/huggingface/transformers
 # !pip install transformers => to install the library
